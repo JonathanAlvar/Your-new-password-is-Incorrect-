@@ -1,10 +1,15 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
 var passwordText = document.querySelector("#password");
 
 //My variables
+var passwordLength = prompt("How long would you like your password? Must be between 8 - 128 characters")
+var confirmspecialCharacters = confirm("Would you like to include special characters?");
+var confirmnumber = confirm("Would you like to included numbers?");
+var confirmlowerCase = confirm("Would you like to include lower case?");
+var confirmupperCase = confirm("Would you like to include upper case?");
 
+//My arrays
 var passwordText = document.querySelector("#password");
 var specialCharacters = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?", "~"];
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -18,35 +23,57 @@ var number = number.length;
 var lowerCase = lowerCase.length;
 var upperCase = upperCase.length;
 
+//Alerts and Prompts
+alert("Hello!")
 console.log("Hello")
 
+alert("Lets get you a password!")
 console.log("Lets get you a password")
 
-//Alerts and Prompts
+//Generating a password
+function generatePassword() {
 
-alert("Hello")
+  //if else functions, dble check is == true is required in if statement
 
-alert("Lets get you a password")
+  if (length < 128 && length > 8) {
 
+    if (confirmspecialCharacters) {
+      alert("Lets get you a special password!");
+      console.log(specialCharacters);
+    }
+    else {
+      alert("Nothing fancy...");
+    };
 
+    if (confirmnumbers) {
+      alert("Your password will include numbers");
+      console.log(numbers)
+    }
+    else {
+      alert("Your password will not have numbers");
+    };
 
-//if else functions
+    if (confirmupperCase) {
+      alert("Your password will include upper case letters");
+      console.log(upperCase)
+    }
+    else {
+      alert("Your password will not have upper case letters");
+    };
 
+    if (confirmlowerCase) {
+      alert("Your password will include lower case letters");
+      console.log(lowerCase)
+    }
+    else {
+      alert("Your password will not have lower case letters");
+    };
+  }
 
-//Generate the password
+  else {
+    alert("Please enter a password length between 8 and 128.");
+    return
+  };
 
-// Write password to the #password input
-function writePassword(event) {
-
-
-  passwordText.value = password;
-
-}
-
-//prompts to ask user
-
-
-
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+  // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
