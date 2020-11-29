@@ -11,7 +11,7 @@ I ran into extreme difficulty when coding the for loop and pushing the code to p
 
 Screen shot
 
-![alt text](C:\Users\alvar\code\Your-new-password-is-Incorrect-\Assets\ScreenShot.jpg)
+![alt text](https://github.com/JonathanAlvar/Your-new-password-is-Incorrect-/blob/main/Assets/ScreenShot.JPG)
 
 URL
 
